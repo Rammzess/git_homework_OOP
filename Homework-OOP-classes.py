@@ -48,8 +48,8 @@ class Student:
         if not isinstance(other_student, Student):
             print('Not a Student!')
         else:
-            mean_other = mean(int(other_student.grades[course]) for course in other_student.grades.keys())
-            self_mean = mean(int(Student.grades[course]) for course in Student.grades.keys())    
+            mean_other = mean(int(other_student.grades.values()) for course in other_student.grades.keys())
+            self_mean = mean(int(Student.grades.values()) for course in Student.grades.keys())    
         return self_mean < mean_other
 
 
